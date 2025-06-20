@@ -10,7 +10,7 @@ Joomla proposant ceci par défaut sur son formulaire de connexion, nous pouvons 
 Pour pouvoir obtenir les fonctionnalités des champs login et mot de passe, il faut modifier le champ de texte proposé par Convert Forms.
 Tassos, le développeur de l'extension, indique dans [sa documentation](https://www.tassos.gr/docs/convert-forms/developers/override-form-ands-layouts-in-your-template#override_a_field_layout) la manière de surcharger les différents champs de l'application.
 
-### Mise en place[^1]
+### Mise en place [^1]
 Nous allons surcharger le champ de type **TEXT** afin d'y ajouter les fonctions pour les champs ciblés.
 
 Rendez-vous vers le fichier original selon le chemin **/administrator/components/com_convertforms/layouts/fields/** et copiez le fichier **text.php**.
@@ -79,12 +79,11 @@ Dans ce fichier vous ajouterez le code CSS suivant :
 	margin-top:10px;
 }
 ```
-Après cet ajout, enregistrez votre fichier, videz les caches et observez maintenant les champs de votre formulaire après avoir actualisé la page. Saisissez quelques caractères dnas le champ de mot de passe et cliquez l'icône œil afin de voir la saisie en mode texte. Cliquez l'icône œil barré pour revenir à l'état "Mot de passe" hachuré.
+Après cet ajout, enregistrez votre fichier, videz les caches et observez maintenant les champs de votre formulaire après avoir actualisé la page [^2]. Saisissez quelques caractères dans le champ de mot de passe et cliquez l'icône œil afin de voir la saisie en mode texte. Cliquez l'icône œil barré pour revenir à l'état "Mot de passe" hachuré.
 
 Pour obtenir l'icône du nom d'utilisateur pour le champ correspondant, il est important de lui donner la **classe CSS de saisie** "**username**" lors de l'édition de ce champ de type texte.
 
-
 Si vous souhaitez obtenir le visuel identique dans l'administration lors de l'édition d'un formulaire, vous devrez répéter les opérations décrites ci-dessus pour le template d'administration Atum.
 
-
 [^1]:Les fichiers nécessaires à cette adaptation sont disponibles au téléchargement, ils doivent être placés selon l'arborescence des répertoires dézippés.
+[^2]:Il est possible que vous deviez adapter quelque peu la CSS selon votre template.
