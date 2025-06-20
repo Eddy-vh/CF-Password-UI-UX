@@ -2,7 +2,7 @@
 ## Convert Forms, moderniser les champs Nom d'utilisateur et Mot de passe
 
 ### Intro
-Dans l'application **Convert Forms**, nous avons un champ de type "**password**" qui ne se diffère pas d'un champ de texte classique et qui n'offre pas la possibilité d'afficher temporairement la saisie et vérifier que l'on n'ait pas tapé un mot de passe erroné.
+Dans l'application **Convert Forms**, nous avons un champ de type "**password**" (mot de passe) qui ne se diffère pas d'un champ de texte classique et qui n'offre pas la possibilité d'afficher temporairement la saisie et vérifier que l'on n'ait pas tapé un mot de passe erroné.
 
 ### To Do
 Joomla proposant ceci par défaut sur son formulaire de connexion, nous pouvons nous servir de ses classes pour modifier le comportement du champ "**Password**" et styliser un champ de type text "**Nom d'utilisateur**" (username) en leur ajoutant les icônes représentatives.
