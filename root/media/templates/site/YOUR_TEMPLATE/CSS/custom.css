@@ -1,0 +1,41 @@
+/*
+@ custom.css file for designed for input type=password and input class=username
+@ Author: Eddy Van Hoeke eddy@eddy-vh.com
+@ Use this file or add this code to an existing custom.css or user.css file.
+*/
+
+/******************************/
+/********* Custom CSS *********/
+/******************************/
+/* format Password / Username + Button */
+
+.convertforms div[data-type="password"] div.cf-control-input,
+.convertforms div[data-name="username"] div.cf-control-input {
+    flex-direction: row;
+    gap:0;
+    flex-wrap:wrap;
+}
+.convertforms div[data-type="password"] input[type="password"], .convertforms div[data-type="password"] input[type="text"],
+.convertforms div[data-name="username"] input {
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+    width:calc(100% - 54px);
+}
+
+.convertforms div[data-type="password"] button,
+.convertforms div[data-name="username"] input + span {
+    width:54px;
+    background:#f9fafb;
+    border: 1px solid lightgrey !important;
+    border-radius:.25rem; /* adaptez à votre formulaire en cas de besoin */
+    border-top-left-radius:0 !important;
+    border-bottom-left-radius:0 !important;
+    border-left:none !important;
+    padding: .6rem 1rem !important;
+    color: #353B41 !important;
+}
+
+.convertforms div[data-type="password"] div.cf-control-input-desc,
+.convertforms div[data-name="username"] div.cf-control-input-desc {
+	margin-top:10px;
+}
