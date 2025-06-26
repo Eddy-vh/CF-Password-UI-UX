@@ -74,16 +74,27 @@ Dans ce fichier vous ajouterez le code CSS suivant :
     color: #353B41 !important;
 }
 
-.convertforms div[data-type="password"] div.cf-control-input-desc,
-.convertforms div[data-name="username"] div.cf-control-input-desc {
+/* gère la description si elle est utilisée et selon son emmplacement, avant ou après le champ */
+.convertforms div[data-type="password"] button + div.cf-control-input-desc,
+.convertforms div[data-name="username"] button + div.cf-control-input-desc {
 	margin-top:10px;
 }
+
+.convertforms div[data-type="password"] div.cf-control-input > div.cf-control-input-desc,
+.convertforms div[data-type="username"] div.cf-control-input > div.cf-control-input-desc {
+  width: 100%;
+  margin-bottom:10px;
+}
+/*////////////////////////////////*/
 ```
-Après cet ajout, enregistrez votre fichier, videz les caches et observez maintenant les champs de votre formulaire après avoir actualisé la page [^2]. Saisissez quelques caractères dans le champ de mot de passe et cliquez l'icône œil afin de voir la saisie en mode texte. Cliquez l'icône œil barré pour revenir à l'état "Mot de passe" hachuré.
+Après cet ajout, enregistrez votre fichier [^2], videz les caches et observez maintenant les champs de votre formulaire après avoir actualisé la page [^3].
+
+Saisissez quelques caractères dans le champ de mot de passe et cliquez l'icône œil afin de voir la saisie en mode texte. Cliquez l'icône œil barré pour revenir à l'état "Mot de passe" hachuré.
 
 Pour obtenir l'icône du nom d'utilisateur pour le champ correspondant, il est important de lui donner la **classe CSS de saisie** "**username**" lors de l'édition de ce champ de type texte.
 
 Si vous souhaitez obtenir le visuel identique dans l'administration lors de l'édition d'un formulaire, vous devrez répéter les opérations décrites ci-dessus pour le template d'administration Atum.
 
 [^1]:Les fichiers nécessaires à cette adaptation sont disponibles au téléchargement, ils doivent être placés selon l'arborescence des répertoires dézippés.
-[^2]:Il est possible que vous deviez adapter quelque peu la CSS selon votre template.
+[^2]:Si vous utiliser ce type de champs sur un seul formulaire, il est bien tentedu possible d'insérer la CSS dans les options du formulaire - Menu **apparence** - Onglet **Avancés** - **CSS personnalisé**.
+[^3]:Pour cet exemple, le template TWO d'astroid a été utilisé. Il est possible que vous deviez adapter quelque peu la CSS selon votre template.
